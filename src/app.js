@@ -23,6 +23,30 @@ function formatTime(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-2">
+              ${day}
+              <img
+                  src="http://openweathermap.org/img/wn/04d@2x.png"
+                  width="45"
+                />
+              18°
+          </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
@@ -96,3 +120,4 @@ let celsius = document.querySelector("#celsius-link");
 celsius.addEventListener("click", displayCelcius);
 
 search("Edinburgh");
+displayForecast();
