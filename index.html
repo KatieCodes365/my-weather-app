@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="./src/style.css" />
     <title>Weather App</title>
   </head>
-  <body>
+  <body onload="randombg()">
+    <div id="random"></div>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
@@ -47,10 +48,10 @@
           </div>
           <div class="row">
             <div class="col-6">
-              <div class="weather-temperature">
+              <div class="d-flex weather-temperature">
                 <img src="" alt="Clear" id="icon" class="'float-left" />
                 <p>
-                  <strong id="temp"></strong
+                  <strong id="temp" class="float-left"></strong
                   ><span class="celsius">
                     <a href="#" id="celsius-link" class="active">°C</a> |
                     <a href="#" id="fahrenheit-link">°F</a></span
@@ -67,16 +68,21 @@
           </div>
           <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small>
+        <small class="github">
           <a
             href="https://github.com/KatieCodes365/weather-app/tree/main/Weather%20App"
             target="_blank"
+            id="github-link"
             >Open-sourced code</a
           >
           by Katie Kennedy
         </small>
+        <button type="button" onclick="randombg()" id="randomizer">
+          Change Background
+        </button>
       </div>
     </div>
+    <section></section>
     <script src="./src/app.js"></script>
   </body>
 </html>

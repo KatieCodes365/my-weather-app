@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: #878787;
+  color: rgb(33, 33, 33, 0.9);
   display: block;
   font-size: 24px;
   font-weight: 100;
@@ -20,7 +20,7 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: rgb(135, 135, 135);
+  color: rgb(33, 33, 33);
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
@@ -49,6 +49,11 @@ p {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 10px;
+  background-color: rgba(223, 205, 205, 0.801);
+  position: absolute;
+  bottom: 300px;
+  right: 400px;
+  max-width: 600px;
 }
 
 .overview {
@@ -67,11 +72,56 @@ p {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  color: #bababa;
+  color: rgb(33, 33, 33);
   font-size: 16px;
+}
+.github {
+  font-family: monospace;
+  color: #dadde1;
+}
+
+#temp {
+  font-size: 80px;
+}
+
+#forecast {
+  font-size: 23px;
+  display: inline;
+  text-align: center;
 }
 
 #fahrenheit-link,
 #celsius-link {
   text-decoration: none;
+}
+
+#max {
+  color: rgb(33, 33, 33);
+}
+
+#min {
+  color: rgb(33, 33, 33, 0.6);
+}
+
+#github-link {
+  color: #dadde1;
+}
+
+#random {
+  width: 1440px;
+  height: 810px;
+  border: 1px solid black;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/353/original/11.png?1646150887");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#randomizer {
+  position: absolute;
+  bottom: 50px;
+  right: 80px;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 30px;
 }

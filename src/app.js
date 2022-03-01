@@ -26,16 +26,8 @@ function formatTime(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
 
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   return days[day];
 }
 
@@ -52,15 +44,14 @@ function displayForecast(response) {
         `
           <div class="col-2">
               ${formatDay(forecastDay.dt)}
-              ${index}
               <img
                   src="http://openweathermap.org/img/wn/${
                     forecastDay.weather[0].icon
                   }@2x.png"
                   width="45"
                 />
-              ${Math.round(forecastDay.temp.max)}°
-              ${Math.round(forecastDay.temp.min)}°
+              <span id="max">${Math.round(forecastDay.temp.max)}°</ span>
+              <span id="min">${Math.round(forecastDay.temp.min)}°</ span>
           </div>
   `;
     }
@@ -154,3 +145,21 @@ celsius.addEventListener("click", displayCelcius);
 
 search("Edinburgh");
 displayForecast();
+
+function randombg() {
+  let random = Math.floor(Math.random() * 10) + 0;
+  let background = [
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/343/original/1.png?1646150702')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/344/original/2.png?1646150716')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/345/original/3.png?1646150726')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/346/original/4.png?1646150735')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/347/original/5.png?1646150747')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/348/original/6.png?1646150759')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/349/original/7.png?1646150771')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/350/original/8.png?1646150782')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/351/original/9.png?1646150791')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/353/original/11.png?1646150887')",
+  ];
+
+  document.getElementById("random").style.backgroundImage = background[random];
+}
