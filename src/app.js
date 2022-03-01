@@ -147,7 +147,7 @@ search("Edinburgh");
 displayForecast();
 
 function randombg() {
-  let random = Math.floor(Math.random() * 10) + 0;
+  let random = Math.floor(Math.random() * 15) + 0;
   let background = [
     "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/343/original/1.png?1646150702')",
     "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/344/original/2.png?1646150716')",
@@ -159,6 +159,11 @@ function randombg() {
     "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/350/original/8.png?1646150782')",
     "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/351/original/9.png?1646150791')",
     "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/353/original/11.png?1646150887')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/336/original/Untitled_design-4.png?1646145432')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/335/original/Untitled_design-3.png?1646145326')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/352/original/10.png?1646150802')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/376/original/13.png?1646164289')",
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/375/original/12.png?1646164274')",
   ];
 
   document.getElementById("random").style.backgroundImage = background[random];
